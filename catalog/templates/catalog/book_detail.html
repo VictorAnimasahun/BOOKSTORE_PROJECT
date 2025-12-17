@@ -1,0 +1,16 @@
+<!-- catalog/templates/catalog/book_detail.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ book.title }}</title>
+</head>
+<body>
+  <nav><a href="/">Home</a> | <a href="/catalog/">Catalog</a> | <a href="/admin/">Admin</a></nav>
+  <h1>{{ book.title }}</h1>
+  {% if book.author %}<h3>By {{ book.author }}</h3>{% endif %}
+  <p>Price: ₦{{ book.price }}</p>
+  <p>Created: {{ book.created_at }}</p>
+  <p><a href="{% url 'catalog:book_list' %}">← Back to catalog</a></p>
+</body>
+</html>

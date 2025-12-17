@@ -1,0 +1,1 @@
+web: gunicorn BOOKSTORE.bookstore.wsgi --log-file -
